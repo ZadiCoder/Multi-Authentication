@@ -25,7 +25,7 @@ class HomeController extends Controller
     {
         $cur_type_name = Auth::user()->Usertype->name;
         if(strpos($cur_type_name, 'Admin') !== false){
-            return view('admin');
+            return view('admin.dashboard');
         }
         else if(strpos($cur_type_name, 'Customer') !== false){
             return view('customer');
